@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>動画ページ</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>動画ページRS4</h1>
+  
+  <!-- YouTubeの動画を埋め込む -->
+  <div class="video-container">
+    <iframe width="1236" height="695" src="https://www.youtube.com/embed/JAOQ6PPeTlQ" title="RS4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- <iframe width="560" height="315" src="https://youtu.be/4Dz2Ot5UCpo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+  </div>
+
+ 
+  <!-- 質問と回答の選択肢 -->
+  <form id="video-questions-form">
+    <!-- 質問1（選択肢） -->
+    <!-- <p>このロボットは、複数人の会話に入り込むように設計されています。それを前提に以下の問いに答えてください。</p> -->
+    <div class="form-group">
+      
+      <p class="question">質問1:ロボット謝ってるように見えますか？</p>
+      <div class="choices">
+        <label> 謝ってるように見えない</label>
+          <label><input type="radio" name="question1" value="1" required> 1</label>
+          <label><input type="radio" name="question1" value="2"> 2</label>
+          <label><input type="radio" name="question1" value="3"> 3</label>
+          <label><input type="radio" name="question1" value="4"> 4</label>
+          <label><input type="radio" name="question1" value="5"> 5</label>
+          <label><input type="radio" name="question1" value="6"> 6</label>
+          <label><input type="radio" name="question1" value="7"> 7</label>
+          <label>謝ってるように見える</label>
+      </div>
+    </div>
+    
+    <!-- 質問2（均等目盛） -->
+    
+    <div class="form-group">
+        
+        <p class="question">質問2: ロボットの外見と動きについて</p>
+        <div class="choices">
+          <label> 不自然</label>
+          <label><input type="radio" name="question2" value="1" required> 1</label>
+          <label><input type="radio" name="question2" value="2"> 2</label>
+          <label><input type="radio" name="question2" value="3"> 3</label>
+          <label><input type="radio" name="question2" value="4"> 4</label>
+          <label><input type="radio" name="question2" value="5"> 5</label>
+          <label><input type="radio" name="question2" value="6"> 6</label>
+          <label><input type="radio" name="question2" value="7"> 7</label>
+          <label> 自然</label>
+        </div>
+
+        <!-- <p class="question">質問3:ロボットの外見と動きについて</p> -->
+        <div class="choices">
+          <label>機械的</label>
+          <label><input type="radio" name="question3" value="1" required> 1</label>
+          <label><input type="radio" name="question3" value="2"> 2</label>
+          <label><input type="radio" name="question3" value="3"> 3</label>
+          <label><input type="radio" name="question3" value="4"> 4</label>
+          <label><input type="radio" name="question3" value="5"> 5</label>
+          <label><input type="radio" name="question3" value="6"> 6</label>
+          <label><input type="radio" name="question3" value="7"> 7</label>
+          <label>人間的</label>
+        </div>
+
+        <!-- <p class="question">質問4:ロボットの外見と動きについて</p> -->
+        <div class="choices">
+          <label>認識を持たない</label>
+          <label><input type="radio" name="question4" value="1" required> 1</label>
+          <label><input type="radio" name="question4" value="2"> 2</label>
+          <label><input type="radio" name="question4" value="3"> 3</label>
+          <label><input type="radio" name="question4" value="4"> 4</label>
+          <label><input type="radio" name="question4" value="5"> 5</label>
+          <label><input type="radio" name="question4" value="6"> 6</label>
+          <label><input type="radio" name="question4" value="7"> 7</label>
+          <label>意識を持っている</label>
+        </div>
+         <!-- <p class="question">質問4:ロボットの外見と動きについて</p> -->
+         <div class="choices">
+          <label>人工的</label>
+          <label><input type="radio" name="question5" value="1" required> 1</label>
+          <label><input type="radio" name="question5" value="2"> 2</label>
+          <label><input type="radio" name="question5" value="3"> 3</label>
+          <label><input type="radio" name="question5" value="4"> 4</label>
+          <label><input type="radio" name="question5" value="5"> 5</label>
+          <label><input type="radio" name="question5" value="6"> 6</label>
+          <label><input type="radio" name="question5" value="7"> 7</label>
+          <label>生物的</label>
+        </div>
+
+        <!-- <p class="question">質問5:ロボットの外見と動きについて</p> -->
+        <div class="choices">
+          <label>ぎこちない動き</label>
+          <label><input type="radio" name="question6" value="1" required> 1</label>
+          <label><input type="radio" name="question6" value="2"> 2</label>
+          <label><input type="radio" name="question6" value="3"> 3</label>
+          <label><input type="radio" name="question6" value="4"> 4</label>
+          <label><input type="radio" name="question6" value="5"> 5</label>
+          <label><input type="radio" name="question6" value="6"> 6</label>
+          <label><input type="radio" name="question6" value="7"> 7</label>
+          <label>洗礼された動き</label>
+        </div>
+
+
+    <button type="submit" class="next-button">次へ</button>
+  </form>
+</div>
+
+<script src="video-page.js"></script>
+</body>
+</html>

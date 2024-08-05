@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>デモグラフィックデータ</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>デモグラフィックデータ</h1>
+  
+  <form id="demographics-form">
+    
+    <div class="form-group">
+      <label for="age">年齢:</label>
+      <input type="number" id="age" name="age" min="0" max="120" required>
+    </div>
+
+    <div class="form-group">
+      <p>性別:</p>
+      <label for="male">
+        <input type="radio" id="male" name="gender" value="male" required> 男
+      </label>
+      <label for="female">
+        <input type="radio" id="female" name="gender" value="female"> 女
+      </label>
+      <label for="other">
+        <input type="radio" id="other" name="gender" value="other"> その他
+      </label>
+    </div>
+
+<button type="submit" class="next-button">次へ</button>
+    
+  </form>
+</div>
+
+<script src="demographics.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>アンケート説明ページ</title>
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="container">
+  <div class="content">
+    <h2>アンケートの説明</h2>
+    <div class="experiment-description">
+      <h2>実験の説明</h2>
+      <p>本実験は，国立情報学研究所・総合研究大学院大学の山田誠二及び一部は小村和輝（総称して、以下、「委託元」という）が実施するものです．</p>
+      <p>本実験は，『人間の行動変容を促すロボットエージェントとシステム属性のインタラクションデザイン』に関するものです．実験参加者には，表示するビデオに関する質問と，その後の簡単なアンケートに回答していただきます．取得するデータは，参加者の年齢，性別，およびアンケートです．</p>
+      <p>実験の時間は，アンケートを含めて全体で15分程度の予定です．すべてのデータは，webブラウザを通して自動的に取得されます．また，参加者に対して，身体的・精神的苦痛をかけることはないように，さらに参加者の名誉や人格の侵害にならように十分な配慮をいたします．</p>
+      <h3>同意事項</h3>
+      <p>私は，『人間の行動変容を促すロボットエージェントとシステム属性のインタラクションデザイン』の参加者実験における目的・方法・予測される問題等について，実験者より説明文書を用いた十分な説明を受け，本実験に関する以下の項目を了解しました．</p>
+      <ul>
+        <h3>研究内容について</h3>
+        <li>参加者に対して身体的・精神的苦痛を与えないこと</li>
+        <li>自らの自由意思でいつでも実験を中止できること</li>
+        <li>いかなる時点において実験参加の拒否をしても何ら不利益を被らないこと</li>
+        <li>被験者の名誉や人格の侵害にならないこと</li>
+        <li>実験で得られたデータは，委託元に受け渡され，個人が特定できない形の統計情報として，論文，学会発表で用いられる場合があること</li>
+        <li>万一不利益を被った場合には，当該ネット調査会社に対して申し立てを行うことができること</li>
+      </ul>
+      <p>以上をふまえて自らの意思により，本実験の参加者になることに同意します．</p>
+      <input type="radio" id="yes-option" name="consent" value="yes" class="radio-button">
+      <label for="yes-option" class="radio-label">はい</label>
+      <input type="radio" id="no-option" name="consent" value="no" class="radio-button">
+      <label for="no-option" class="radio-label">いいえ</label>
+    </div>
+    
+    <!-- その他の説明テキスト -->
+    <!-- <div class="radio-container"> -->
+    <!--     <input type="radio" id="yes-option" name="consent" value="yes" class="radio-button"> -->
+    <!--     <label for="yes-option" class="radio-label">はい</label> -->
+    <!-- </div> -->
+    <!-- <div class="radio-container"> -->
+    <!--     <input type="radio" id="no-option" name="consent" value="no" class="radio-button"> -->
+    <!--     <label for="no-option" class="radio-label">いいえ</label> -->
+    <!-- </div> -->
+  </div>
+  <button class="next-button" disabled>次へ</button>
+</div>
+
+
+
+</body>
+</html>
+<script>
+  function downloadCSV() {
+    var csv = 'key,value\n';
+    for (var i = 0; i < sessionStorage.length; i++) {
+      var key = sessionStorage.key(i);
+      var value = sessionStorage.getItem(key);
+      csv += key + ',' + value + '\n';
+    }
+    var blob = new Blob([csv], {type: 'text/csv'});
+    var url = window.URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.setAttribute('hidden','');
+    a.setAttribute('href',url);
+    a.setAttribute('download','data.csv');
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+</script>

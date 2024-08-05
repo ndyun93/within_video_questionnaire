@@ -1,0 +1,177 @@
+/* ベースのスタイル */
+body, html {
+  /*height: 100%;*/
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+
+/* コンテナーのスタイル */
+.container {
+  display: flex;
+  flex-direction: column;
+  /*justify-content: center;*/
+  align-items: center; /* 中央揃えに変更 */
+  /*height: 100%;*/
+  text-align: center;
+  padding: 20px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 5%;
+  /* height: 0; */
+  /* overflow: hidden; */
+  /* margin-bottom: 0px; */
+  margin: auto;
+  overflow: hidden;
+}
+
+/* iframeのスタイル */
+.iframe {
+  display: block; 
+  width: 560px; 
+  height: 315px; 
+  border: 0; 
+}
+/* .iframe {
+  display: block; 
+  width: 1236x; 
+  height: 695px;
+  border: 0; 
+} */
+/* コンテンツエリアのスタイル */
+.content h1 {
+  margin-bottom: 20px;
+}
+
+.content p {
+  margin-bottom: 40px;
+}
+/* 特定のdiv内のpタグのマージンをカスタマイズする場合 */
+.experiment-description p {
+  max-width: 800px; /* 最大幅を600ピクセルに設定 */
+  /* text-align: left;  */
+  margin-right: auto; /* 右マージンを自動調整 */
+  margin-left: auto; /* 左マージンを自動調整 */
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* リストのスタイルも調整する場合 */
+.experiment-description ul {
+  max-width: 800px; /* 最大幅を600ピクセルに設定 */
+  /* text-align: left;  */
+  margin-right: auto; /* 右マージンを自動調整 */
+  margin-left: auto; /* 左マージンを自動調整 */
+  padding-left: 20px; /* リストのインデントを設定 */
+  margin-top: 0.5em; /* リストの上部のマージンを設定 */
+  margin-bottom: 0.5em; /* リストの下部のマージンを設定 */
+}
+
+.experiment-description li {
+  margin-bottom: 0.5em; /* リストアイテムの下部のマージンを設定 */
+}
+.radio-container {
+  padding-left: 350px; /* リストのインデントを設定 */
+  display: flex;
+  align-items: center; /* これにより、ラジオボタンとラベルが中央揃えになる */
+  margin: 10px 0;
+}
+
+/* ラジオボタンのスタイル（必要に応じて） */
+.radio-button {
+  margin-right: 100px;
+  margin-left: 100px; /* ラベルとの間隔 */
+}
+
+/* ボタンのスタイル */
+.next-button {
+  display: block;
+  width: auto; /* 入力フィールドの幅を広げる */
+  padding: 10px 20px;
+  margin: 20px auto;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.next-button:hover {
+  background-color: #0056b3;
+}
+
+/* 上記のスタイルを引き続き使用 */
+
+/* ラジオボタンのカスタマイズ */
+input[type="radio"] {
+  margin-right: 8px;
+}
+
+/* ラベルのカスタマイズ */
+label {
+  display: block;
+  margin: 10px 0;
+}
+
+/* これまでのスタイルに加えて */
+/* フォームグループのスタイル */
+.form-group {
+max-width: 800px;
+margin-bottom: 20px;
+text-align: center;
+}
+
+/* ラジオボタンとラベルのスタイル */
+input[type="radio"] {
+margin-right: 5px;
+}
+
+/* ラジオボタンのラベルを横並びにする */
+.radio-label {
+display: inline-block;
+margin-right: 15px;
+}
+
+
+
+/* 均等目盛のラジオボタンとラベルを横に並べる */
+.question {
+margin-bottom: 10px;
+display: block;
+}
+
+.choices {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  /*   
+
+display: flex;
+/* flex-direction: column; */
+/* align-items: center; */
+/* justify-content: center;  */
+/* 中央揃えに設定 */
+/* flex-wrap: wrap;  */
+/* 必要に応じて折り返す */
+/* justify-content: flex-start; */
+/* margin-bottom: 20px; */ 
+}
+
+.choices label {
+margin-right: 10px;
+white-space: nowrap;
+}
+
+.choices label:last-child {
+margin-right: 0;
+}
+
+
+
+
+
